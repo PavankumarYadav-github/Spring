@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.jspider.springreleations.onetoonebean.AadharBean" name="aadhar1">
+	<property name="id" value="1"/>
+	<property name="aadhar_no" value="123548"/>
+	<property name="date_of_issue" value="20/125/15"/>
+	<property name="person" ref="person1"/>
+		
+	</bean>
+	<bean class="com.jspider.springreleations.onetoonebean.PersonBean" name="person1">
+	<property name="id" value="1"/>
+	<property name="name" value="Ramesh"/>
+	<property name="email" value="ramesh@gmail.com"/>
+	<property name="contact" value="123456789"/>
+	<property name="aadhar" ref="aadhar1"/>	
+	</bean>
+
+</beans>
